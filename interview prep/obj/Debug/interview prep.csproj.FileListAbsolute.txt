@@ -1,0 +1,6 @@
+c:\users\ayomikun\documents\visual studio 2015\Projects\interview prep\interview prep\bin\Debug\interview prep.exe.config
+c:\users\ayomikun\documents\visual studio 2015\Projects\interview prep\interview prep\bin\Debug\interview prep.exe
+c:\users\ayomikun\documents\visual studio 2015\Projects\interview prep\interview prep\bin\Debug\interview prep.pdb
+c:\users\ayomikun\documents\visual studio 2015\Projects\interview prep\interview prep\obj\Debug\interview prep.csprojResolveAssemblyReference.cache
+c:\users\ayomikun\documents\visual studio 2015\Projects\interview prep\interview prep\obj\Debug\interview prep.exe
+c:\users\ayomikun\documents\visual studio 2015\Projects\interview prep\interview prep\obj\Debug\interview prep.pdb
