@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace interview_prep
 {
@@ -44,10 +46,12 @@ namespace interview_prep
             //StringBuilder ayo = new StringBuilder();
 
             // playHideAndSeek();
-           
+
 
             //countAllCharInstances("AbacDazabacaasDADlLLAodoonnrrmakkkefkkdkmbvlsllskfkmvpsppskf");
 
+
+            Execute(helloWorld, 50000);
 
 
             Console.ReadLine();
@@ -331,8 +335,26 @@ namespace interview_prep
                 }
             }
         }
+            
+        public static void Execute(Action man, int n)
+        {
+            Console.WriteLine("This is where the function was called");
+            Stopwatch timer = new Stopwatch();
+            timer.Start();
+            System.Threading.Thread.Sleep(n);
 
-       
+            timer.Stop();
+            TimeSpan ts = timer.Elapsed;
+            Console.WriteLine(ts);
+
+
+            //await Task.Delay(n);
+            man();
+        }
+        private static void helloWorld ()
+        {
+            Console.WriteLine("Hello World");
+        }
 
     }
 }
