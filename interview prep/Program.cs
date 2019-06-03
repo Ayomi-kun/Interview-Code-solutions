@@ -341,9 +341,12 @@ namespace interview_prep
             Console.WriteLine("This is where the function was called");
             Stopwatch timer = new Stopwatch();
             timer.Start();
+
+            // calling funny pause time for an interval
             System.Threading.Thread.Sleep(n);
 
             timer.Stop();
+            //calculating the elpased time if it matched n
             TimeSpan ts = timer.Elapsed;
             Console.WriteLine(ts);
 
