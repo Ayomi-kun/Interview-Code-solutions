@@ -51,7 +51,13 @@ namespace interview_prep
             //countAllCharInstances("AbacDazabacaasDADlLLAodoonnrrmakkkefkkdkmbvlsllskfkmvpsppskf");
 
 
-            Execute(helloWorld, 50000);
+            //Execute(helloWorld, 50000);
+
+            string ayo = Encode("Ayo", 4);
+
+
+
+            Console.WriteLine(ayo);
 
 
             Console.ReadLine();
@@ -359,5 +365,23 @@ namespace interview_prep
             Console.WriteLine("Hello World");
         }
 
+        private static string Encode(string Message, int key)
+        {
+            
+            var NewMessage = new StringBuilder();
+            foreach (var item in Message)
+            {
+                //int character1 = Int32.Parse(item); cannot convert from char to string
+                int character1 = (int)(item) + key;
+
+                if (character1 > 126)
+                    character1 -= 126;
+
+                
+                NewMessage.Append(Convert.ToChar(character1));
+            }
+            string NewMessage1 = NewMessage.ToString();
+            return NewMessage1;
+        }
     }
 }
