@@ -375,13 +375,35 @@ namespace interview_prep
                 int character1 = (int)(item) + key;
 
                 if (character1 > 126)
-                    character1 -= 126;
+                {
+                    character1 -= 127;
+                    character1 += 32;
 
-                
+                }
                 NewMessage.Append(Convert.ToChar(character1));
             }
             string NewMessage1 = NewMessage.ToString();
             return NewMessage1;
         }
+
+        private static string Decode(string Message, int key)
+        {
+            var NewMessage = new StringBuilder();
+            foreach (var item in Message)
+            {
+                int character = (int)(item) - key;
+
+                if (character < 32)
+                {
+                    character = 32 - character;
+                    character = 127 - character;
+                }
+                NewMessage.Append(Convert.ToChar(character));
+            }
+            string NewMessage1 = NewMessage.ToString();
+            return NewMessage1;
+        }
+
+        
     }
 }
