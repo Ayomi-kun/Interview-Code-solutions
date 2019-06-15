@@ -53,11 +53,11 @@ namespace interview_prep
 
             //Execute(helloWorld, 50000);
 
-            string ayo = Encode("Ayo", 4);
+            Communicate("Bolakunmi is a fish but Ayo is a good boy");
 
 
 
-            Console.WriteLine(ayo);
+            
 
 
             Console.ReadLine();
@@ -404,6 +404,17 @@ namespace interview_prep
             return NewMessage1;
         }
 
-        
+        private static void Communicate(string EncodedMessage)
+        {
+            Random rndnum = new Random();
+            int RandomKey = rndnum.Next(1, 25);
+            string MessageEncode = Encode(EncodedMessage, RandomKey);
+
+            Console.WriteLine(MessageEncode);
+
+            string MessageDecode = Decode(MessageEncode, RandomKey);
+
+            Console.WriteLine(MessageDecode);
+        }
     }
 }
